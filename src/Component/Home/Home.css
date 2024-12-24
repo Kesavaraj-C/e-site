@@ -1,7 +1,6 @@
 .home-container{
     height:auto;
     width:100vw;
-    /* top:0px; */
 }
 .home-main{
     height:90vh;
@@ -20,7 +19,6 @@
     font-size: 18px;
     background: #fff;
   
-    /* Center slide text vertically */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,18 +43,7 @@
     position:absolute;
     display:flex;
 }
-/* .home-slider1::before{
-    height:100%;
-    width:100%;
-    content:'';
-    display:flex;
-    background-image:url(../../Assets/Images/hipster-863678_1280.jpg);
-    background-repeat: no-repeat;
-    background-attachment:fixed;
-    background-size: cover;
-    z-index:999;
-    
-} */
+
  .home-content{
     position:absolute;
     height:300px;
@@ -102,7 +89,6 @@
     width:100%;
     display:flex;
     position:relative;
-    /* box-shadow:0px 0px 5px black; */
     border-radius:5px;
     overflow: hidden;
 }
@@ -155,7 +141,6 @@
 }
 .home-products-title li{
     list-style-type:none;
-    /* padding:20px; */
     margin:20px 40px;
     font-size:32px;
     color:rgb(119, 128, 119);
@@ -194,13 +179,11 @@
     flex-direction:column;
     border:2px solid grey;
     border-radius: 10px;
-    /* box-shadow:2px 5px 5px black; */
     background-color:white;
     transition:all 0.5s;
 }
 .homeproduct-container:hover{
     transform:scale(1.02);
-    /* border: 10px solid red; */
     box-shadow:10px 20px 25px 0px green;
 }
 .homeproduct-image:hover img{
@@ -272,7 +255,6 @@
     height:200px;
     width:100%;
     display:flex;    
-    /* background-color:red; */
     padding:40px;
 }
 .customerClr-details1-container{
@@ -288,9 +270,7 @@
     height:120px;
     width:350px;
     display:flex;    
-    /* background-color:blue; */
     justify-content: space-evenly;
-    /* align-items: center; */
     padding:10px 0px;
 
   
@@ -298,7 +278,6 @@
 .customerClr-details1 img{
     height:60px;
     width:60px;
-    /* border:2px solid grey; */
     border-radius: 50%;
     background-color:white;
     padding:10px;
@@ -336,12 +315,10 @@ footer{
     min-height: 200px;
     max-width:300px;
     padding:20px;
-    /* background-color:blue; */
 }
 .footer-siteNote h1{
     margin:20px 0px;
     letter-spacing:1.3px;
-    /* text-align: center; */
 }
 .footer-siteNote p{
     margin:20px 0px;
@@ -365,7 +342,6 @@ footer{
 .footerAbout,.footerAccessibility,.footerCommunity{
     height:400px;
     width:260px;
-    /* background-color:blue;   */
 }
 .footerAbout li,.footerAccessibility li,.footerCommunity li{
     list-style: none;
