@@ -67,7 +67,7 @@ function getdata(data) {
   console.log(filters);
 
   setmydata((data)=>[...data,...filters])
-  dispatch(myreducers.addCart(respProduct))
+  dispatch(myreducers.addCart(mydata))
   
 }
 console.log(mydata)
@@ -77,7 +77,9 @@ console.log(mydata)
         <div className="searchBar">
             <div className='searchBar-left'>
               <Link to='/'><div className="searchBar-logo"><img src={logo} alt="logo"></img></div></Link> 
+              <div className="searchbar-outerlayer">
               <input type="text" placeholder='Search products' onChange={(e)=>setsearchinpt(e.target.value)} />
+              </div>
             </div>
             <div className="searchBar-right">
               <FaRegHeart className="searchBar-like searchBar-selector" />

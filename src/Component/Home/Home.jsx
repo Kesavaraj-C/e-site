@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, {useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import Navbar, { inans } from '../Navbar/Navbar';
@@ -34,10 +34,7 @@ import { Navigation } from 'swiper/modules';
 const Home = () => {
   const [items, setItems] = useState([]);
   const [filter, setFilter] = useState([]);
-  const bathil = useContext(inans);
-  // console.log("Search", bathil);
-
-  // Fetch products
+ 
   async function products() {
     const data = await axios.get("https://fakestoreapi.com/products");
     setItems(data.data);
@@ -47,14 +44,6 @@ const Home = () => {
     products();
   }, []);
 
-  useEffect(() => {
-    if (bathil) {
-      const filterData = items.filter(data => data.category.toLowerCase().trim() === bathil.toLowerCase().trim());
-      setFilter(filterData);
-    } else {
-      setFilter(items);
-    }
-  }, [bathil, items]);
 
   return (
     <>
@@ -68,7 +57,7 @@ const Home = () => {
               disableOnInteraction:true
             }}
           className="mySwiper">
-            <SwiperSlide>
+            <SwiperSlide>~
               <div className="home-slider">
                 <img src={slider1} alt="" />
                 <div className="home-content">
@@ -136,7 +125,7 @@ const Home = () => {
           </div>
 
           <div className="hm-products">
-            {filter.map((x) => (
+            {items.map((x) => (
               <div className="homeproduct-container" key={x.id}>
                 <div className="homeproduct-image">
                   <img src={x.image} alt="" />
@@ -145,7 +134,7 @@ const Home = () => {
                 <div className="homeproduct_details">
                   <p>{x.category}<hr></hr></p>
                   <h4>{x.title}</h4>
-                  <span>{x.price}</span>
+                  <span>${x.price}</span>
                 </div>
                 <div className="homeproduct-responce">
                   <FaRegHeart className="hmp-res-icons" />

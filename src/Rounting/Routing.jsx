@@ -7,21 +7,20 @@ import Cart from '../Component/Cart/Cart'
 import Home from '../Component/Home/Home'
 import User from '../Component/User/User'
 
+
 const Routing = () => {
   return (
     <>
-        <BrowserRouter> 
         
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/product' element={<Product />} />
-                <Route path='/Admin' element={<User/>} />
+                <Route path='/Admin' element={<Admin/>} />
                 <Route path='/cart' element={<Cart/>} />
             </Routes>
-        </BrowserRouter>
 
     </>
   )
 }
 
-export default Routing
+export default Routing;

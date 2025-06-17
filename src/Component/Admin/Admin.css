@@ -92,3 +92,100 @@
     box-shadow:1px 1px 5px black;
     cursor: pointer;
 }
+
+@media only screen and (min-width:768px) {
+    .admin-container{
+        background: url('../../Assets/Images/bg.jpeg');
+        height:100vh;
+        width:100vw;
+        display:nonex;
+        align-items:center;
+        justify-content:center;
+        position: relative;
+     
+    }
+    .admin-container:before{
+        content: '';
+        height:100%;
+        width:100%;
+        opacity:1;
+        position:absolute;
+        background-color:rgba(18, 19, 19, 0.5);
+        z-index: 999;
+        filter:brightness(50%);
+    }
+    .admin-panel{
+        height:500px;
+        width:370px;  
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding:20px 0px;
+        background-color:transparent;
+        border-radius:15px;
+        color:rgb(255, 255, 255);
+        box-shadow:10px 10px 20px black;
+        position:relative;
+        z-index:9999;
+    }   
+    .admin-panel{
+        padding:20px;
+        font-size:20px;
+    }
+    .admin-panel::before{
+        content: '';
+        height:100%;
+        width:100%;
+        background-color:white;
+        position: absolute;
+        top:0;
+        border-radius:15px;
+        box-shadow:10px 10px 20px black;
+        z-index:-9999;
+        opacity: 0.2;
+    }   
+    .admin-panel h1{
+        text-shadow: 2px 5px 20px rgb(13, 11, 11);
+        padding:15px;
+    }
+    .admin-rinfo{
+        margin-top:20px;
+        display:flex;
+        flex-direction:column;
+    }
+    .admin-rinfo h5{
+        letter-spacing:1.1px;
+        padding:2px;
+        font-size: 16px;
+        margin-bottom: 4px;
+        text-shadow: 2px 3px 5px rgb(0, 0, 0);
+    
+    
+      
+    
+    }
+    .admin-rinfo input{
+        height:28px;
+        width:280px;
+        margin-bottom:15px;
+        border-radius:3px;
+        border:0px solid grey;
+        box-shadow:-1px -1px 5px rgb(0, 0, 0);
+        outline: none;
+    }
+    .admin-switch{
+        width:100%;
+        display:flex;
+        justify-content:space-evenly;
+        margin-top:15px;
+    }
+    .admin-switch button{
+        height:40PX;
+        width:110px;
+        background-color:rgba(62, 176, 92, 0.511);
+        border-radius:25px;
+        border:0px solid grey;
+        box-shadow:1px 1px 5px black;
+        cursor: pointer;
+    }
+}

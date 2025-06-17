@@ -4,7 +4,21 @@ import { createSlice,configureStore } from "@reduxjs/toolkit"
     const slice = createSlice({
     name:"products",
     initialState:{
-        datas:[]
+        datas:[],
+        accessperson:[
+            {
+                name:"kesavaraj",
+                email:"kesavaraj48@gmail.com",
+                password:"12345678",
+                accesstype:"admin"
+            },
+            {
+                name:"kesavaraj",
+                email:"vijaykrishnan@gmail.com",
+                password:"12345678",
+                accesstype:"user"  
+            }
+        ]
     },
     reducers:{
         addCart(store,action)

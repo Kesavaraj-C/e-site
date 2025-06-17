@@ -1,13 +1,13 @@
-import React ,{ createContext,useEffect,useState } from 'react'
+import React ,{useEffect,useState } from 'react'
 import './Navbar.css'
 import { BsPersonFillCheck } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";   
 import { IoMdHeartEmpty } from "react-icons/io";
 import { IoBagHandleOutline } from "react-icons/io5";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { logDOM } from '@testing-library/react';
 
-export const inans= createContext(); 
+// export const inans= createContext(); 
 
 const Navbar = () => {
 
@@ -40,7 +40,10 @@ return (
     <>
     <nav className='navbar-container'>
         <ul className="navbar-options">
-                <a href=""><li>Home</li></a>
+                <NavLink to >
+                <li>Home</li>
+                </NavLink>
+               
                 <a href=""><li>Shop</li></a>
                 <a href=""><li>pages</li></a>
                 <a href=""><li>Blog</li></a>
@@ -50,19 +53,19 @@ return (
             <h1>BRAND..</h1>
         </div>
         <div className="nav-info">
-            <Link to='/Admin'>
+            <NavLink to='/Admin'>
                     <BsPersonFillCheck className='nav-info_icons'/>
-            </Link>
-            <Link to="/product">
+            </NavLink>
+            <NavLink to="/product">
                 <CiSearch className='nav-info_icons' />
-             </Link>
+             </NavLink>
 
             <IoMdHeartEmpty className='nav-info_icons'/>
             <div className="nav-cart">
-                <Link to='/cart'>
+                <NavLink to='/cart'>
                     <IoBagHandleOutline className='nav-info_icons'/>
                     <div className="cart-count">0</div>
-                </Link>
+                </NavLink>
             </div>
         </div>
 
