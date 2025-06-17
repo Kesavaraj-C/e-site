@@ -59,8 +59,9 @@ return (
             <NavLink to="/product">
                 <CiSearch className='nav-info_icons' />
              </NavLink>
-
-            <IoMdHeartEmpty className='nav-info_icons'/>
+            <NavLink>
+              <IoMdHeartEmpty className='nav-info_icons'/>
+            </NavLink>
             <div className="nav-cart">
                 <NavLink to='/cart'>
                     <IoBagHandleOutline className='nav-info_icons'/>
